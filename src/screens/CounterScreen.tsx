@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Text, TouchableOpacity, View } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 
 const CounterScreen = () => {
   const [count, setCount] = useState(10)
@@ -8,15 +8,8 @@ const CounterScreen = () => {
   const decreaseCount = () => setCount((prev) => prev - 1)
 
   return (
-    <View style={{
-      flex: 1,
-      justifyContent: 'center',
-    }}>
-      <Text style={{
-        fontSize: 30,
-        textAlign: 'center',
-        top: -20
-      }}>
+    <View style={styles.container}>
+      <Text style={styles.title}>
         Counter: {count}
       </Text>
 
@@ -24,10 +17,7 @@ const CounterScreen = () => {
         onPress={incrementCount}
       >
         <View
-          style={{
-            backgroundColor: 'blue',
-            borderRadius: 2,
-          }}
+          style={styles.primaryButton}
         >
           <Text>+1</Text>
         </View>
@@ -36,15 +26,32 @@ const CounterScreen = () => {
       <TouchableOpacity
         onPress={decreaseCount}
       >
-        <View style={{
-          backgroundColor: 'red',
-          borderRadius: 2
-        }}>
+        <View style={styles.secondaryButton}>
           <Text>-1</Text>
         </View>
       </TouchableOpacity>
     </View>
   )
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+  },
+  title: {
+    fontSize: 30,
+    textAlign: 'center',
+    top: -20
+  },
+  primaryButton: {
+    backgroundColor: 'blue',
+    borderRadius: 2,
+  },
+  secondaryButton: {
+    backgroundColor: 'red',
+    borderRadius: 2
+  }
+})
 
 export default CounterScreen
