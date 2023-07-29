@@ -1,6 +1,6 @@
 import React from 'react'
-import HelloWorldScreen from './src/screens/HelloWorldScreen'
+import CounterScreen from './src/screens/CounterScreen'
 
-const App = () => (<HelloWorldScreen />)
+const App = () => (<CounterScreen />)
 
 export default App
