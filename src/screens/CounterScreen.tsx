@@ -15,19 +15,23 @@ const CounterScreen = () => {
 
       <TouchableOpacity
         onPress={incrementCount}
+        style={styles.fabLocationRight}
       >
-        <View
-          style={styles.primaryButton}
+        <View 
+          style={styles.fab}
         >
-          <Text>+1</Text>
+          <Text style={styles.fabText}>+1</Text>
         </View>
       </TouchableOpacity>
       
       <TouchableOpacity
         onPress={decreaseCount}
+        style={styles.fabLocationLeft}
       >
-        <View style={styles.secondaryButton}>
-          <Text>-1</Text>
+        <View
+          style={styles.fab}
+        >
+          <Text style={styles.fabText}>-1</Text>
         </View>
       </TouchableOpacity>
     </View>
@@ -44,13 +48,28 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     top: -20
   },
-  primaryButton: {
-    backgroundColor: 'blue',
-    borderRadius: 2,
+  fabLocationRight: {
+    bottom: 10,
+    position: 'absolute',
+    right: 10,
   },
-  secondaryButton: {
-    backgroundColor: 'red',
-    borderRadius: 2
+  fabLocationLeft: {
+    bottom: 10,
+    left: 10,
+    position: 'absolute',
+  },
+  fab: {
+    backgroundColor: '#5856D6',
+    borderRadius: 100,
+    height: 60,
+    justifyContent: 'center',
+    width: 60,
+  },
+  fabText: {
+    alignSelf: 'center',
+    color: '#ffffff',
+    fontSize: 24,
+    fontWeight: 'bold',
   }
 })
 
