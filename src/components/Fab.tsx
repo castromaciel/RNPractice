@@ -50,7 +50,7 @@ const Fab: FC<FabProps> = ({
           (position === 'bottom-right') ? styles.right : styles.left
         ]}
       >
-      <TouchableNativeFeedback
+        <TouchableNativeFeedback
           onPress={onPress}
           background={
             TouchableNativeFeedback.Ripple('#28425B', false, 30)

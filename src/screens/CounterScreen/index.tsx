@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { StyleSheet, Text, View } from 'react-native'
-import Fab from '../components/Fab'
+import Fab from '../../components/Fab'
 
 const CounterScreen = () => {
   const [count, setCount] = useState(10)
