@@ -18,28 +18,28 @@ const FlexScreen = () => {
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: '#0D1117',
     flex: 1,
-    backgroundColor: '#0D1117'
   },
   box: {
     borderWidth: 2,
-    borderColor: '#FFFFFF',
+    borderColor: '#FFD700',
     alignItems: 'center',
     justifyContent: 'center',
   },
   paragraph: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#FFFFFF',
+    color: '#FFD700',
   },
   first: {
     flex: 1,
   },
   second: {
-    flex: 2,
+    flex: 1,
   },
   third: {
-    flex: 3,
+    flex: 1,
   },
 });
 
